@@ -5,27 +5,26 @@ using UnityEngine;
 
 public class Cubes : MonoBehaviour
 {
+    public static float particalSpeed;
     [SerializeField] GameObject cubePart;
     GameObject Player;
+    ParticleSystem crashParticle;
+    MeshRenderer cubeMesh;
     // Start is called before the first frame update
     void Start()
     {
+        cubeMesh = GetComponentInChildren<MeshRenderer>();
+        crashParticle = GetComponentInChildren<ParticleSystem>();
         Player = GameObject.Find("Player");
-        CreateCube();
     }
 
-    private void CreateCube()
-    {
-        for (float i = -0.5f; i < 0.5f; i = i + 0.1f)
-        {
-            //Instantiate(cubePart,new Vector3())
-        }
-    }
+    
 
     // Update is called once per frame
     void Update()
     {
         DestroyObject();
+        crashParticle.startSpeed = particalSpeed;
     }
 
     private void DestroyObject()
@@ -35,5 +34,14 @@ public class Cubes : MonoBehaviour
             Destroy(gameObject);
         }
         
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Player")
+        {
+            crashParticle.Play();
+            cubeMesh.enabled = false;
+        }
     }
 }

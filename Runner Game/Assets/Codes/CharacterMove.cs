@@ -19,6 +19,7 @@ public class CharacterMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Cubes.particalSpeed = characterRigidbody.velocity.magnitude;
         zValue = Input.GetAxis("Vertical") * speed;
 
         if (Input.GetKeyDown(KeyCode.G))
