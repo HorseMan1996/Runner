@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 3859036092695956105}
   - component: {fileID: 413389303267616120}
   - component: {fileID: 2061894208475213298}
+  - component: {fileID: 9172198832387778000}
+  - component: {fileID: 4195858557099056131}
   m_Layer: 0
   m_Name: TPlatform
   m_TagString: Tplatform
@@ -100,6 +102,31 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &2061894208475213298
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3478953959588012179}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3891d6b37a1409d4b942855648f9257b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!135 &9172198832387778000
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3478953959588012179}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.57
+  m_Center: {x: 0, y: 0, z: -0.38}
+--- !u!114 &4195858557099056131
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

@@ -23,15 +23,30 @@ public class CreatePlatform : MonoBehaviour
 
         if (lastPlatform != null)
         {
-            dummyTraveller.transform.position = lastPlatform.transform.position +
-                PlayerController.player.transform.forward * 10;
+
+            if (lastPlatform.tag == "")
+            {
+                dummyTraveller.transform.position = lastPlatform.transform.position +
+    PlayerController.player.transform.forward * 20;
+            }
+            else
+            {
+                dummyTraveller.transform.position = lastPlatform.transform.position +
+                    PlayerController.player.transform.forward * 10;
+            }
+
 
             if (lastPlatform.tag == "StairUp")
             {
                 dummyTraveller.transform.Translate(0, 6.9f, 0);
 
             }
-           
+            else if (lastPlatform.tag == "StairDown")
+            {
+                dummyTraveller.transform.Translate(0, -6.9f, 0);
+
+            }
+
         }
 
         lastPlatform = p;
