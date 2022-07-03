@@ -1,11 +1,17 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CreatePlatform : MonoBehaviour
 {
     static public GameObject dummyTraveller;
     static public GameObject lastPlatform;
+
+    public void QuitMenu()
+    {
+        SceneManager.LoadScene("Menu",LoadSceneMode.Single);
+    }
 
     // Start is called before the first frame update
     void Awake()
@@ -56,9 +62,6 @@ public class CreatePlatform : MonoBehaviour
 
         if (p.tag == "StairDown")
         {
-            Debug.Log("AŞAĞI");
-           // dummyTraveller.transform.Translate(0, -13.8f, 0);
-            // p.transform.Rotate
             p.transform.position = dummyTraveller.transform.position;
         }
     }

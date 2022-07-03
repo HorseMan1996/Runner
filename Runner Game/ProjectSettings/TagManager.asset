@@ -8,6 +8,11 @@ TagManager:
   - StairUp
   - StairDown
   - Tplatform
+  - Fire
+  - wall
+  - Spell
+  - gamedata
+  - score
   layers:
   - Default
   - TransparentFX

@@ -18,8 +18,6 @@ public class Cubes : MonoBehaviour
         Player = GameObject.Find("Player");
     }
 
-    
-
     // Update is called once per frame
     void Update()
     {
